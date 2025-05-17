@@ -215,7 +215,7 @@
                 </button>
             </div>
             <div class="sidebar-content">
-                <a href="/about-us" class="sidebar-link">About Us</a>
+                <a href="./aboutUs" class="sidebar-link">About Us</a>
                 <a href="./register" class="sidebar-link">Register</a>
                 <a href="./login" class="sidebar-link">Sign In</a>
                 <img src="Images/zairza_sidebar.png" alt="Zairza" class="sidebar-image">
@@ -230,6 +230,15 @@
                 loader.style.display = 'none';
                 content.classList.add('visible');
             }, 1000);
+        });
+
+        // Hamburger menu functionality
+        document.querySelector('.navbar__menu').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.add('active');
+        });
+
+        document.getElementById('closeSidebar').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.remove('active');
         });
 
         let isPlaying = false;
